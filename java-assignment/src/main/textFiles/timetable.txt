@@ -1,0 +1,4 @@
+D01;Alfred;/home/cms/Downloads/1.jpg;Monday,6am, 7am, 8am, 9am, 10am, 11am;Tuesday,6am, 7am, 8am, 9am, 10am, 11am, 12pm;Wednesday,6am, 7am, 8am, 9am, 10am, 11am, 12pm
+D02;Chong;/home/cms/Downloads/2.jpg;Friday,2pm, 3pm, 4pm, 5pm, 6pm;Thursday,2pm, 3pm, 4pm, 5pm, 6pm, 7pm, 8pm;Saturday,2pm, 3pm, 4pm, 5pm, 6pm
+D03;Mun;/home/cms/Downloads/3.jpg;Thursday,6am, 7am, 8am, 9am, 10am, 11am, 12pm;Wednesday,6am, 7am, 8am, 9am, 10am, 11am, 12pm
+D04;Seong;/home/cms/Downloads/4.jpg;Thursday,2pm, 3pm, 4pm, 5pm, 6pm, 7pm;Friday,2pm, 3pm, 4pm, 5pm, 6pm, 7pm, 8pm, 9pm

@@ -1,0 +1,31 @@
+.left-form {
+    -fx-background-color: linear-gradient(to bottom right, #2193b0, #6dd5ed);
+    -fx-border-color: #000;
+    -fx-border-width: .4px 0px .4px .4px;
+}
+
+.right-form {
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: .4px 0px .4px .4px;
+}
+
+.close {
+    -fx-background-color: transparent;
+}
+
+.close:hover {
+    -fx-background-color: #ff4d5f;
+}
+
+.login-btn {
+    -fx-background-color:linear-gradient(to bottom right, #2193b0, #6dd5ed);
+    -fx-background-radius: 15px;
+    -fx-cursor: hand;
+}
+
+.next-btn {
+    -fx-background-color:linear-gradient(to bottom right, #2b5876, #4e4376);
+    -fx-background-radius: 15px;
+    -fx-cursor: hand;
+}

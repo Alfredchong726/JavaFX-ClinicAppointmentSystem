@@ -1,0 +1,19 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "java-assignment/lib/javafx-sdk-19.0.2.1/lib/javafx.controls.jar",
+        "java-assignment/lib/javafx-sdk-19.0.2.1/lib/javafx.fxml.jar",
+        "java-assignment/lib/javafx-sdk-19.0.2.1/lib/javafx.media.jar",
+        "java-assignment/lib/javafx-sdk-19.0.2.1/lib/javafx.web.jar",
+        "java-assignment/lib/javafx-sdk-19.0.2.1/lib/javafx-swt.jar",
+        "java-assignment/lib/javafx-sdk-19.0.2.1/lib/javafx.base.jar",
+        "java-assignment/lib/javafx-sdk-19.0.2.1/lib/javafx.graphics.jar",
+        "java-assignment/lib/javafx-sdk-19.0.2.1/lib/javafx.swing.jar",
+        "java-assignment/lib/fontawesomefx-8.2.jar",
+        "java-assignment/lib/ojdbc14.jar",
+        "java-assignment/lib/mysql-connector-java-8.0.30.jar"
+    ],
+    "java.project.sourcePaths": [
+        "java-assignment/src"
+    ]
+}

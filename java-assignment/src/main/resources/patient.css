@@ -1,0 +1,92 @@
+.close {
+    -fx-background-color: transparent;
+}
+
+.close:hover {
+    -fx-background-color: #ff4d5f;
+}
+
+.minimize {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.minimize:hover {
+    -fx-background-color: #ddd;
+}
+
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom right, #36d1dc, #5b86e5);
+    -fx-border-color: #000;
+    -fx-border-width: .4px 0px .4px .4px;
+}
+
+.sidebar-btn {
+    -fx-background-color: transparent;
+}
+
+.logout-button {
+    -fx-cursor: hand;
+    -fx-background-color: #36d1dc;
+    -fx-background-radius: 20px;
+}
+
+.logout-button:hover {
+    -fx-background-color: #5b86e5;
+}
+
+.white-bg {
+    -fx-background-color: #fff;
+    -fx-background-radius: 8px;
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);
+}
+
+.top-form {
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: .4px, .4px, .2px, .4px;
+}
+
+.semi-top-form {
+    -fx-background-color: #efefef;
+    -fx-border-color: #000;
+    -fx-border-width: .2px, .4px, .8px, .4px;
+}
+
+.confirm-btn {
+    -fx-cursor: hand;
+    -fx-background-color: #2b5876;
+    -fx-background-radius: 20px;
+}
+
+.confirm-btn:hover {
+    -fx-background-color: #4e4376;
+}
+
+.input {
+    -fx-background-color: linear-gradient(to bottom, #efefef, #eee);
+    -fx-background-radius: 4px;
+    -fx-border-color: linear-gradient(to bottom right, #36d1dc, #5b86e5);
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+}
+
+.input:focused {
+    -fx-background-color: #ffff;
+    -fx-border-width: 1.8px;
+}
+
+.cancel-btn {
+    -fx-background-color:#eb3349;
+    -fx-background-radius:8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+}
+
+.cancel-btn:hover{
+    -fx-background-color:#f45c43;
+}

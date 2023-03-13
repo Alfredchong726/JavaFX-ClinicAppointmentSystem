@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GeneralController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane layoutX="381.0" layoutY="173.0" prefHeight="650.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <AnchorPane prefHeight="650.0" prefWidth="339.0" styleClass="left-form" stylesheets="@../main/resources/superadmin.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <FontAwesomeIcon fill="WHITE" glyphName="STETHOSCOPE" layoutX="129.0" layoutY="241.0" size="8em" />
+                                <Label layoutX="34.0" layoutY="307.0" text="APU CLINIC APPOINTMENT SYSTEM" textFill="WHITE">
+                                    <font>
+                                        <Font name="Times New Roman Bold" size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <FontAwesomeIcon fill="#2b5876" glyphName="PLANE" layoutX="270.0" layoutY="158.0" size="6em" />
+                                <Label layoutX="179.0" layoutY="221.0" text="Welcome SuperAdmin">
+                                    <font>
+                                        <Font name="Times New Roman Bold" size="25.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="superAdminUsername" layoutX="189.0" layoutY="289.0" promptText="Username" styleClass="input" stylesheets="@../main/resources/superadmin.css">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                                <PasswordField fx:id="superAdminPassword" layoutX="189.0" layoutY="357.0" promptText="Password" styleClass="input" stylesheets="@../main/resources/superadmin.css">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </PasswordField>
+                                <Button layoutX="157.0" layoutY="444.0" mnemonicParsing="false" onAction="#backToMainSceneFromSuperAdminLogin" style="-fx-background-radius: 15px;" styleClass="cancel-btn" stylesheets="@../main/resources/superadmin.css" text="Back" textFill="WHITE">
+                                    <graphic>
+                                        <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" />
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="superAdminLogin" layoutX="377.0" layoutY="444.0" mnemonicParsing="false" onAction="#superAdminlogin" styleClass="confirm-btn" stylesheets="@../main/resources/superadmin.css" text="Login" textFill="WHITE">
+                                    <graphic>
+                                        <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" />
+                                    </graphic>
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="537.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                    <graphic>
+                                        <FontAwesomeIcon glyphName="TIMES" />
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

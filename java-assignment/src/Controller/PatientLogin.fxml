@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GeneralController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="650.0" prefWidth="374.0" styleClass="sidebar" stylesheets="@../main/resources/patient.css">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="STETHOSCOPE" layoutX="136.0" layoutY="221.0" size="10em" />
+                  <Label layoutX="20.0" layoutY="266.0" prefHeight="20.0" prefWidth="334.0" text="APU CLINIC  APPOINTMENT SYSTEM" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button alignment="CENTER" layoutX="919.0" mnemonicParsing="false" onAction="#close" prefHeight="28.0" prefWidth="56.0" styleClass="close" stylesheets="@../main/resources/patient.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+               <graphic>
+                  <FontAwesomeIcon glyphName="CLOSE" size="1.5em" wrappingWidth="11.321428298950195" />
+               </graphic>
+            </Button>
+            <FontAwesomeIcon fill="#36d1dc" glyphName="USER_SECRET" layoutX="634.0" layoutY="164.0" size="6em" />
+            <Label layoutX="586.0" layoutY="210.0" text="Welcome, User">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userName" layoutX="554.0" layoutY="267.0" prefHeight="40.0" prefWidth="227.0" promptText="Username" styleClass="input" stylesheets="@../main/resources/patient.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="Password" layoutX="553.0" layoutY="337.0" prefHeight="40.0" prefWidth="227.0" promptText="Password" styleClass="input" stylesheets="@../main/resources/patient.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="userlogin" layoutX="658.0" layoutY="423.0" mnemonicParsing="false" onAction="#userLogin" styleClass="confirm-btn" stylesheets="@../main/resources/patient.css" text="Login" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="userBackBtn" layoutX="562.0" layoutY="424.0" mnemonicParsing="false" onAction="#backToMainSceneFromUserLogin" style="-fx-background-radius: 15px;" styleClass="cancel-btn" stylesheets="@../main/resources/patient.css" text="Back">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="525.0" layoutY="477.0" text="Don't have an account? " />
+            <Button fx:id="signup" layoutX="666.0" layoutY="469.0" mnemonicParsing="false" onAction="#signup" style="-fx-background-color: transparent; -fx-underline: true;" text="Sign Up Now" textFill="#2039ab">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.patientController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane layoutX="6.0" prefHeight="650.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+                    <top>
+                        <AnchorPane prefHeight="31.0" prefWidth="900.0" styleClass="top-form" stylesheets="@../main/resources/patient.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="-7.6" layoutY="2.4" prefHeight="30.0" prefWidth="908.0" styleClass="semi-top-form" stylesheets="@../main/resources/patient.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+                                    <children>
+                                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="774.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="26.0" prefWidth="57.0" styleClass="minimize" stylesheets="@../main/resources/patient.css" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="2.0">
+                                            <graphic>
+                                                <FontAwesomeIcon glyphName="MINUS" />
+                                            </graphic>
+                                        </Button>
+                                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="826.0" layoutY="11.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="57.0" styleClass="close" stylesheets="@../main/resources/patient.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                            <graphic>
+                                                <FontAwesomeIcon glyphName="CLOSE" />
+                                            </graphic>
+                                        </Button>
+                                        <FontAwesomeIcon glyphName="STETHOSCOPE" layoutX="14.0" layoutY="21.0" size="1.5em" />
+                                        <Label layoutX="41.0" layoutY="8.0" text="APU CLINIC APPOINTMENT SYSTEM">
+                                            <font>
+                                                <Font name="Times New Roman" size="12.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane prefHeight="602.0" prefWidth="221.0" styleClass="sidebar" stylesheets="@../main/resources/patient.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="medicalRecordsBtn" layoutX="14.0" layoutY="201.0" mnemonicParsing="false" onAction="#switchPanel" prefHeight="31.0" prefWidth="186.0" styleClass="sidebar-btn" stylesheets="@../main/resources/patient.css" text="Medical Records" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIcon fill="WHITE" glyphName="MEDKIT" size="1.5em" />
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="bookAppointmentBtn" layoutX="14.0" layoutY="260.0" mnemonicParsing="false" onAction="#switchPanel" prefHeight="32.0" prefWidth="186.0" styleClass="sidebar-btn" stylesheets="@../main/resources/patient.css" text="Book Appointment" textFill="WHITE">
+                                    <graphic>
+                                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS" size="1.5em" />
+                                    </graphic>
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="dashBoardBtn" layoutX="16.0" layoutY="316.0" mnemonicParsing="false" onAction="#switchPanel" prefHeight="33.0" prefWidth="181.0" styleClass="sidebar-btn" stylesheets="@../main/resources/patient.css" text="DashBoard" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIcon fill="WHITE" glyphName="CLIPBOARD" size="1.5em" />
+                                    </graphic>
+                                </Button>
+                                <FontAwesomeIcon fill="WHITE" glyphName="USER_SECRET" layoutX="67.0" layoutY="121.0" size="7em" />
+                                <Label fx:id="userName" alignment="CENTER" layoutX="32.0" layoutY="145.0" prefHeight="21.0" prefWidth="148.0" text="username" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="signout" layoutX="14.0" layoutY="538.0" mnemonicParsing="false" onAction="#logout" styleClass="logout-button" stylesheets="@../main/resources/patient.css">
+                                    <graphic>
+                                        <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="3em" />
+                                    </graphic>
+                                </Button>
+                                <Label layoutX="74.0" layoutY="549.0" text="Sign Out" textFill="WHITE">
+                                    <font>
+                                        <Font name="Cantarell Regular" size="20.0" />
+                                    </font>
+                                </Label>
+                        <Line endX="100.0" layoutX="111.0" layoutY="180.0" startX="-100.0" stroke="WHITE" />
+                            </children>
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="medicalRecordsPanel" layoutX="78.0" layoutY="100.0" prefHeight="599.0" prefWidth="676.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Pane layoutX="9.0" layoutY="7.0" prefHeight="581.0" prefWidth="648.0" stylesheets="@../main/resources/patient.css" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="7.0">
+                                            <children>
+                                                <Label layoutX="55.0" layoutY="21.0" text="Medical Record Number :">
+                                                    <font>
+                                                        <Font name="Hack Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextArea fx:id="pastMedicalHistory" editable="false" layoutX="256.0" layoutY="178.0" prefHeight="68.0" prefWidth="374.0" wrapText="true" />
+                                                <TextField fx:id="medicalRecordNum" editable="false" layoutX="258.0" layoutY="16.0" prefHeight="26.0" prefWidth="373.0" />
+                                                <Label layoutX="124.0" layoutY="60.0" text="Day Of Birth :">
+                                                    <font>
+                                                        <Font name="Hack Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="DOB" editable="false" layoutX="258.0" layoutY="55.0" prefHeight="26.0" prefWidth="371.0" />
+                                                <Label layoutX="100.0" layoutY="99.0" text="Chief Complaint :">
+                                                    <font>
+                                                        <Font name="Hack Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="chiefComplaint" editable="false" layoutX="258.0" layoutY="94.0" prefHeight="26.0" prefWidth="369.0" />
+                                                <Label layoutX="14.0" layoutY="143.0" text="History of Present Illness :">
+                                                    <font>
+                                                        <Font name="Hack Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="historyOfPresentIllness" editable="false" layoutX="258.0" layoutY="138.0" prefHeight="26.0" prefWidth="370.0" />
+                                                <Label layoutX="63.0" layoutY="186.0" text="Past Medical History :">
+                                                    <font>
+                                                        <Font name="Hack Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="128.0" layoutY="271.0" text="Medications :">
+                                                    <font>
+                                                        <Font name="Hack Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="medications" editable="false" layoutX="257.0" layoutY="266.0" prefHeight="26.0" prefWidth="371.0" />
+                                                <Label layoutX="139.0" layoutY="313.0" text="Allergies: :">
+                                                    <font>
+                                                        <Font name="Hack Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="allergies" editable="false" layoutX="256.0" layoutY="308.0" prefHeight="26.0" prefWidth="371.0" />
+                                                <Label layoutX="116.0" layoutY="353.0" text="Physical Exam :">
+                                                    <font>
+                                                        <Font name="Hack Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextArea fx:id="physicalExam" editable="false" layoutX="256.0" layoutY="344.0" prefHeight="104.0" prefWidth="374.0" wrapText="true" />
+                                                <Label layoutX="69.0" layoutY="472.0" text="Assessment and Plan :">
+                                                    <font>
+                                                        <Font name="Hack Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextArea fx:id="assesmentAndPlan" editable="false" layoutX="258.0" layoutY="459.0" prefHeight="104.0" prefWidth="374.0" wrapText="true" />
+                                            </children>
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                        </Pane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="bookAppointmentPanel" layoutX="165.0" layoutY="81.0" prefHeight="599.0" prefWidth="676.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="20.0" layoutY="11.0" prefHeight="312.0" prefWidth="637.0" stylesheets="@../main/resources/patient.css" AnchorPane.bottomAnchor="279.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="11.0">
+                                            <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                            </styleClass>
+                                            <children>
+                                                <Label layoutX="32.0" layoutY="45.0" text="Doctor :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <ComboBox fx:id="docName" layoutX="107.0" layoutY="42.0" onAction="#setSpecificOptionsToDatePicker" prefHeight="26.0" prefWidth="178.0" promptText="Choose..." styleClass="input" stylesheets="@../main/resources/patient.css" />
+                                                <AnchorPane fx:id="docImage" layoutX="424.0" layoutY="28.0" prefHeight="170.0" prefWidth="130.0" stylesheets="@../main/resources/patient.css">
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <ImageView fx:id="appointmentPanelImage" fitHeight="170.0" fitWidth="130.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+                                                        <Label layoutX="37.0" layoutY="75.0" opacity="0.5" rotate="-45.0" text="Sample">
+                                                            <font>
+                                                                <Font name="Times New Roman Bold" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                                <DatePicker fx:id="Date" layoutX="107.0" layoutY="106.0" onAction="#setItemToTimeComboBox" prefHeight="26.0" prefWidth="181.0" styleClass="input" stylesheets="@../main/resources/patient.css" />
+                                                <Label layoutX="48.0" layoutY="109.0" text="Date :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="43.0" layoutY="171.0" text="Time :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <ComboBox fx:id="Time" layoutX="107.0" layoutY="168.0" prefHeight="26.0" prefWidth="179.0" promptText="Choose..." styleClass="input" stylesheets="@../main/resources/patient.css" />
+                                                <Button fx:id="confirmBtn" layoutX="339.0" layoutY="257.0" mnemonicParsing="false" onAction="#confirmBtnClicked" styleClass="confirm-btn" stylesheets="@../main/resources/patient.css" text="Confirm" textFill="WHITE" />
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="dashboardPanel" layoutX="155.0" layoutY="89.0" prefHeight="602.0" prefWidth="679.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="29.0" layoutY="34.0" prefHeight="238.0" prefWidth="490.0" stylesheets="@../main/resources/patient.css">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                            <children>
+                                                <Label layoutX="121.0" layoutY="14.0" text="Next Appointment">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="24.0" />
+                                                    </font>
+                                                </Label>
+                                                <FontAwesomeIcon fill="#25a4da" glyphName="USER" layoutX="21.0" layoutY="142.0" size="6em" />
+                                                <Label alignment="CENTER" layoutX="121.0" layoutY="75.0" prefHeight="18.0" prefWidth="117.0" text="Doctor :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Button fx:id="cancelAppointment" layoutX="414.0" layoutY="189.0" mnemonicParsing="false" onAction="#cancelAppointment" styleClass="cancel-btn" stylesheets="@../main/resources/patient.css" text="Cancel" />
+                                                <Label alignment="CENTER" layoutX="128.0" layoutY="105.0" prefHeight="18.0" prefWidth="117.0" text="Date :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="128.0" layoutY="136.0" prefHeight="18.0" prefWidth="117.0" text="Day :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="126.0" layoutY="169.0" prefHeight="18.0" prefWidth="117.0" text="Time :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="nextAppointmentDoctor" layoutX="216.0" layoutY="76.0" text="nextAppointmentDay">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="nextAppointmentDate" layoutX="216.0" layoutY="106.0" text="nextAppointmentDay">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="nextAppointmentDay" layoutX="216.0" layoutY="137.0" text="nextAppointmentDay">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="nextAppointmentTime" layoutX="216.0" layoutY="170.0" text="nextAppointmentDay">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="27.0" layoutY="308.0" prefHeight="233.0" prefWidth="494.0" stylesheets="@../main/resources/patient.css">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                            <children>
+                                                <Label layoutX="102.0" layoutY="14.0" text="Previous Appointment">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="24.0" />
+                                                    </font>
+                                                </Label>
+                                                <FontAwesomeIcon fill="#25a4da" glyphName="USER" layoutX="380.0" layoutY="141.0" size="6em" />
+                                                <Label alignment="CENTER" layoutX="48.0" layoutY="60.0" prefHeight="18.0" prefWidth="117.0" text="Doctor :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="55.0" layoutY="90.0" prefHeight="18.0" prefWidth="117.0" text="Date :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="55.0" layoutY="121.0" prefHeight="18.0" prefWidth="117.0" text="Day :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="53.0" layoutY="154.0" prefHeight="18.0" prefWidth="117.0" text="Time :">
+                                                    <font>
+                                                        <Font name="Times New Roman" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="previousAppointmentDoctor" layoutX="143.0" layoutY="61.0" text="previousAppointment">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="previousAppointmentDate" layoutX="143.0" layoutY="91.0" text="previousAppointment">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="previousAppointmentDay" layoutX="143.0" layoutY="122.0" text="previousAppointment">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="previousAppointmentTime" layoutX="143.0" layoutY="155.0" text="previousAppointment">
+                                                    <font>
+                                                        <Font name="Times New Roman Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
